@@ -16,6 +16,7 @@
                 <outlet property="emailTextField" destination="b4r-Ly-f2Q" id="RoZ-99-hPG"/>
                 <outlet property="firstnameTextField" destination="3qy-DZ-dPf" id="Mqn-Ml-xvi"/>
                 <outlet property="lastnameTextField" destination="HxN-dD-g7b" id="UeZ-HS-yJ8"/>
+                <outlet property="photoImageView" destination="WoJ-dn-IQe" id="uZf-q2-8Fh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9m3-md-KPO"/>
             </connections>
         </placeholder>
@@ -89,6 +90,11 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WoJ-dn-IQe" userLabel="photoImageView">
+                    <rect key="frame" x="412" y="454" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.2955048408" green="0.59336344620000003" blue="0.91308346520000006" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="-274" y="-5"/>

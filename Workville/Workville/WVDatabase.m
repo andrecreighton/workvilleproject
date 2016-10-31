@@ -11,21 +11,59 @@
 @implementation WVDatabase
 
 
--(instancetype)initStorageToDatabaseWithFirstname:(NSString *)firstname Lastname:(NSString *)lastname Email:(NSString *)email{
+
+-(instancetype)init{
+    
     
     self = [super init];
     
     if(self)
     {
         
-        _firstname = firstname;
-        _lastname = lastname;
-        _email = email;
+        if(!_databaseRef)
+        {
+            
+            _databaseRef = [[FIRDatabase database] reference];
+            
+        }
         
     }
     
-
+    
     return self;
+    
+    
+}
+
+-(instancetype)initWithFirstName:(NSString *)firstname Lastname:(NSString *)lastname Email:(NSString *)email{
+    
+    
+    self = [super init];
+    
+    
+
+    if(self){
+    
+        
+        _firstname = firstname;
+        _lastname = lastname;
+        _email = email;
+    
+        
+     //   [self storeUserInDatabaseWithFirstName:firstname Lastname:lastname Email:email];
+        
+    }
+    
+    return self;
+}
+
+
+-(void)updateDatabaseInfoWithArray:(NSArray *)userArray{
+    
+
+    [[self.databaseRef child:@"users"] setValue:userArray];
+
+    
 }
 
 

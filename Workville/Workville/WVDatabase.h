@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @import FirebaseDatabase;
 @interface WVDatabase : NSObject
 
@@ -18,12 +19,9 @@
 
 
 
-
--(instancetype)initStorageToDatabaseWithFirstname:(NSString *)firstname
-                                   Lastname:(NSString *)lastname
-                                      Email:(NSString *)email;
-
-
+-(instancetype)init;
+-(instancetype)initWithFirstName:(NSString *)firstname Lastname:(NSString *)lastname Email:(NSString *)email;
+-(void)updateDatabaseInfoWithArray:(NSArray *)userArray;
 
 
 @end

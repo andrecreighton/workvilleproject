@@ -13,6 +13,8 @@
 
 
 @interface AppDelegate ()
+@property (strong, nonatomic) FIRDatabaseReference *ref;
+
 
 @end
 
@@ -26,7 +28,6 @@
     //Firebase configuration
     
     [FIRApp configure];
-
     
     //Initial view
     
