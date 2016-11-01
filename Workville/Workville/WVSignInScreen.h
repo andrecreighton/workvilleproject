@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WVWelcomeScreen.h"
 
 @interface WVSignInScreen : UIViewController
 

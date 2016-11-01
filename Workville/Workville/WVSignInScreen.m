@@ -85,18 +85,21 @@
     NSString *firstname = self.firstnameTextField.text;
     NSString *lastname  = self.lastnameTextField.text;
     NSString *email     = self.emailTextField.text;
-    
-    
-  //  WVDatabase *database = [[WVDatabase alloc]init];
-  //  [database initWithFirstName:firstname Lastname:lastname Email:email];
-    
+
+    // Createss the user with initial properties firstname, lastname, and email
     
     WVUser *user = [[WVUser alloc] initWithFirstname:firstname Lastname:lastname email:email];
     
     
     
+    WVWelcomeScreen *welcomeScreen = [[WVWelcomeScreen alloc] initWithNibName:@"WVWelcomeScreen" bundle:nil];
+    [self presentViewController:welcomeScreen animated:YES completion:nil];
+
+    
     
 //    [self setUpImageProcess];
+    
+    
     
     
     
@@ -112,17 +115,7 @@
     _picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
     _picker.showsCameraControls = YES;
-    
-  /*
-    NSArray *nibContents = [[NSBundle mainBundle] loadNibNamed:@"WVPhotoFrameView"
-                                                         owner:nil
-                                                       options:nil];
-    
-    UIView *photoFrame = [nibContents firstObject];
-    photoFrame.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-    _picker.cameraOverlayView = photoFrame;
-   
-    */
+
 
     [self presentViewController:_picker animated:YES completion:nil];
    

@@ -8,6 +8,7 @@
 
 #import "WVUser.h"
 #import "WVDataStore.h"
+#import "WVDatabase.h"
 
 @implementation WVUser
 
@@ -38,8 +39,13 @@
                                      @"email"     : self.email};
     
     
-    WVDataStore *datastore = [WVDataStore sharedDataStore];
-    [datastore storeUsersInDatabaseFromUserInfo:userDictionary];
+    
+    WVDatabase *database = [[WVDatabase alloc] init];
+    
+    [database updateDatabaseInfoWithDictionary:userDictionary];
+    
+   // WVDataStore *datastore = [WVDataStore sharedDataStore];
+   // [datastore storeUsersInDatabaseFromUserInfo:userDictionary];
 
 }
 

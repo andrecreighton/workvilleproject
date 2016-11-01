@@ -27,8 +27,7 @@
     self.signinButton.layer.cornerRadius = self.signinButton.bounds.size.height/4;
    
     
-    
-    
+
 }
 - (IBAction)whenSignInButtonTapped:(id)sender {
     
@@ -37,6 +36,7 @@
     NSLog(@"when sign in button tapped");
     self.signInViewController = [[WVSignInScreen alloc]initWithNibName:@"WVSignInScreen" bundle:nil];
     [self presentViewController:self.signInViewController animated:YES completion:nil];
+  //  [self dismissViewControllerAnimated:YES completion:nil];
     
     
     

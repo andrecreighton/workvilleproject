@@ -21,7 +21,7 @@
 
 -(instancetype)init;
 -(instancetype)initWithFirstName:(NSString *)firstname Lastname:(NSString *)lastname Email:(NSString *)email;
--(void)updateDatabaseInfoWithArray:(NSArray *)userArray;
+-(void)updateDatabaseInfoWithDictionary:(NSDictionary *)userDicitonary;
 
 
 @end

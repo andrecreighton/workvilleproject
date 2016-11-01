@@ -50,20 +50,29 @@
         _email = email;
     
         
-     //   [self storeUserInDatabaseWithFirstName:firstname Lastname:lastname Email:email];
-        
     }
     
     return self;
 }
 
 
--(void)updateDatabaseInfoWithArray:(NSArray *)userArray{
+-(void)updateDatabaseInfoWithDictionary:(NSDictionary *)userDictionary{
     
 
-    [[self.databaseRef child:@"users"] setValue:userArray];
-
     
+    if([self.databaseRef child:@"users"])
+    {
+        NSLog(@"it already exists");
+        
+        
+        FIRDatabaseReference *userReference = [self.databaseRef child:@"users"];
+        [[userReference childByAutoId] setValue:userDictionary];
+        
+        
+    }
+    else{
+        [[self.databaseRef child:@"users"] setValue:userDictionary];
+    }
 }
 
 

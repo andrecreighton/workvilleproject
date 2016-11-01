@@ -12,6 +12,7 @@
 @interface WVUser : NSObject
 
 @property (strong, nonatomic) WVUser *user;
+@property (strong, nonatomic) NSDate   *signInTime;
 @property (strong, nonatomic) NSString *firstname;
 @property (strong, nonatomic) NSString *lastname;
 @property (strong, nonatomic) NSString *email;

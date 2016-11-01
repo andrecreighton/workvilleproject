@@ -49,7 +49,7 @@
     [self.arrayOfUsers addObject:user];
     WVDatabase *database = [[WVDatabase alloc]init];
     
-    [database updateDatabaseInfoWithArray:self.arrayOfUsers];
+   // [database updateDatabaseInfoWithArray:self.arrayOfUsers];
     
     
 
