@@ -23,6 +23,8 @@
 		31F5B2651DBE9D0900D1C34E /* WVDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F5B2641DBE9D0900D1C34E /* WVDatabase.m */; };
 		31F5B2681DBEA6FD00D1C34E /* WVSignInScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F5B2671DBEA6FD00D1C34E /* WVSignInScreen.xib */; };
 		31F5B26B1DBEA96000D1C34E /* WVSignInScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F5B26A1DBEA96000D1C34E /* WVSignInScreen.m */; };
+		31F8CD291DD11DE200AE4920 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */; };
+		31F8CD2C1DD11E6E00AE4920 /* WVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F8CD2B1DD11E6E00AE4920 /* WVReachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,10 @@
 		31F5B2671DBEA6FD00D1C34E /* WVSignInScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WVSignInScreen.xib; sourceTree = "<group>"; };
 		31F5B2691DBEA96000D1C34E /* WVSignInScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVSignInScreen.h; sourceTree = "<group>"; };
 		31F5B26A1DBEA96000D1C34E /* WVSignInScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVSignInScreen.m; sourceTree = "<group>"; };
+		31F8CD271DCFFB5500AE4920 /* AppConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
+		31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		31F8CD2A1DD11E6E00AE4920 /* WVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WVReachability.h; path = ../../../../../Downloads/Reachability/Reachability/WVReachability.h; sourceTree = "<group>"; };
+		31F8CD2B1DD11E6E00AE4920 /* WVReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WVReachability.m; path = ../../../../../Downloads/Reachability/Reachability/WVReachability.m; sourceTree = "<group>"; };
 		BEF042B991E70BFC6DFB7F44 /* libPods-Workville.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workville.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38C97D624698AAF44270CA9 /* Pods-Workville.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workville.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workville/Pods-Workville.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F8CD291DD11DE200AE4920 /* SystemConfiguration.framework in Frameworks */,
 				0763ADD00C6D52A2D6B967BD /* libPods-Workville.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +123,8 @@
 		31F5B23F1DBE8BA100D1C34E /* Workville */ = {
 			isa = PBXGroup;
 			children = (
+				31F8CD2A1DD11E6E00AE4920 /* WVReachability.h */,
+				31F8CD2B1DD11E6E00AE4920 /* WVReachability.m */,
 				319B49171DC7A961004F267A /* Workville.entitlements */,
 				31F5B2661DBE9D1300D1C34E /* Models */,
 				31F5B25D1DBE8CE100D1C34E /* Views */,
@@ -158,6 +167,7 @@
 		31F5B25E1DBE8EB500D1C34E /* app */ = {
 			isa = PBXGroup;
 			children = (
+				31F8CD271DCFFB5500AE4920 /* AppConstant.h */,
 				31DE223E1DC1368B002C926C /* GoogleService-Info.plist */,
 				31F5B2431DBE8BA100D1C34E /* AppDelegate.h */,
 				31F5B2441DBE8BA100D1C34E /* AppDelegate.m */,
@@ -193,6 +203,7 @@
 		E5EA922F70591E4B051C0041 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */,
 				BEF042B991E70BFC6DFB7F44 /* libPods-Workville.a */,
 			);
 			name = Frameworks;
@@ -337,6 +348,7 @@
 				31F5B2651DBE9D0900D1C34E /* WVDatabase.m in Sources */,
 				31F5B2421DBE8BA100D1C34E /* main.m in Sources */,
 				319B491A1DC7AD36004F267A /* WVUser.m in Sources */,
+				31F8CD2C1DD11E6E00AE4920 /* WVReachability.m in Sources */,
 				31F5B2591DBE8C7400D1C34E /* WVLaunchScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

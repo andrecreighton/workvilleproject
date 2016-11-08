@@ -59,20 +59,19 @@
 -(void)updateDatabaseInfoWithDictionary:(NSDictionary *)userDictionary{
     
 
-    
-    if([self.databaseRef child:@"users"])
+    FIRDatabaseReference *userReference = [self.databaseRef child:@"users"];
+    [[userReference childByAutoId] setValue:userDictionary];
+
+  /*  if([self.databaseRef child:@"users"])
     {
         NSLog(@"it already exists");
         
-        
-        FIRDatabaseReference *userReference = [self.databaseRef child:@"users"];
-        [[userReference childByAutoId] setValue:userDictionary];
-        
-        
     }
     else{
+        
+        
         [[self.databaseRef child:@"users"] setValue:userDictionary];
-    }
+    } */
 }
 
 

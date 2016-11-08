@@ -12,6 +12,7 @@
 @interface WVWelcomeScreen ()
 
 @property (nonatomic,strong) WVLaunchScreen *launchScreen;
+@property (strong, nonatomic) IBOutlet UIImageView *workvilleLogo;
 
 @end
 
@@ -22,7 +23,8 @@
     
     
     self.launchScreen = [[WVLaunchScreen alloc] initWithNibName:@"WVLaunchScreen" bundle:nil];
-    
+    [self.workvilleLogo setTintColor:[UIColor clearColor]];
+    [self.workvilleLogo setBackgroundColor:[UIColor clearColor]];
     
 }
 

@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     self.welcomeLabel.text = @"Workville";
-    self.signinButton.layer.cornerRadius = self.signinButton.bounds.size.height/4;
+   // self.signinButton.layer.cornerRadius = self.signinButton.bounds.size.height/4;
    
     
 

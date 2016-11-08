@@ -16,8 +16,6 @@
 
 @property (strong, nonatomic) IBOutlet UIView *centerView;
 @property (strong, nonatomic) IBOutlet UIView *photoFrameContentView;
-
-
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UITextField *firstnameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *lastnameTextField;
@@ -26,6 +24,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) UIImagePickerController *picker;
 @property (strong, nonatomic) WVDataStore* datastore;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
+
+@property (strong, nonatomic) NSString *dateString;
 
 
 @end
@@ -43,7 +44,14 @@
 //        self.continueButton.enabled = NO;
 
     self.photoImageView.layer.cornerRadius = self.photoImageView.bounds.size.width/2;
+  //  [self.backButton setTintColor:[UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1]];
 
+    [self.backButton setTitleColor:[UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1] forState:UIControlStateNormal];
+    
+    self.backButton.tintColor = [UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1];
+    
+    
+    
     
     [self setUpTextFields];
 
@@ -67,13 +75,9 @@
 
 - (IBAction)whenBackButtonTapped:(id)sender {
     
-    NSLog(@"back button tapped");
     
     [self.view endEditing:YES];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    
     
 }
 

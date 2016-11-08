@@ -6,6 +6,7 @@
 //  Copyright © 2016 Andre Creighton. All rights reserved.
 //
 
+
 #import "AppDelegate.h"
 #import "WVLaunchScreen.h"
 #import "WVSignInScreen.h"
@@ -13,17 +14,20 @@
 
 
 @interface AppDelegate ()
-@property (strong, nonatomic) FIRDatabaseReference *ref;
 
+@property (strong, nonatomic) FIRDatabaseReference *ref;
+@property (assign) BOOL internetActive;
 
 @end
 
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     
     //Firebase configuration
     
@@ -47,6 +51,19 @@
 
     return YES;
 }
+
+
+-(BOOL)isConnectionAvailable{
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
