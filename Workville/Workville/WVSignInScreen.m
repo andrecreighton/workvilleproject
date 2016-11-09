@@ -71,7 +71,7 @@
 
 - (IBAction)whenBackButtonTapped:(id)sender {
     
-    NSLog(@"RESPONDING");
+    
     
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -83,7 +83,7 @@
 
 - (IBAction)whenContinueButtonTapped:(id)sender {
     
-    NSLog(@"RESPONDING");
+    
     
     
     NSString *firstname = self.firstnameTextField.text;
