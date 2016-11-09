@@ -123,7 +123,7 @@
                 <constraint firstItem="39F-Mu-exz" firstAttribute="top" secondItem="HDy-HL-BUp" secondAttribute="top" constant="20" id="6jW-r7-Ty2"/>
                 <constraint firstItem="39F-Mu-exz" firstAttribute="leading" secondItem="HDy-HL-BUp" secondAttribute="leading" id="uxh-W8-ei6"/>
             </constraints>
-            <point key="canvasLocation" x="-1284" y="-32"/>
+            <point key="canvasLocation" x="-1600" y="-47"/>
         </view>
     </objects>
     <resources>

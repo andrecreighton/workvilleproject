@@ -7,7 +7,6 @@
 //
 
 #import "WVUser.h"
-#import "WVDataStore.h"
 #import "WVDatabase.h"
 
 @implementation WVUser

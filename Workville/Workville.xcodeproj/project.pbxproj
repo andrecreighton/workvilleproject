@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0763ADD00C6D52A2D6B967BD /* libPods-Workville.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF042B991E70BFC6DFB7F44 /* libPods-Workville.a */; };
-		319B49161DC7A8B3004F267A /* WVDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 319B49151DC7A8B3004F267A /* WVDataStore.m */; };
+		31433E121DD3A401006EB3C2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31433E111DD3A401006EB3C2 /* AVFoundation.framework */; };
 		319B491A1DC7AD36004F267A /* WVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 319B49191DC7AD36004F267A /* WVUser.m */; };
 		319B491F1DC7D9F0004F267A /* WVWelcomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 319B491E1DC7D9F0004F267A /* WVWelcomeScreen.xib */; };
 		319B49241DC7DE05004F267A /* WVWelcomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 319B49231DC7DE05004F267A /* WVWelcomeScreen.m */; };
@@ -25,12 +25,12 @@
 		31F5B26B1DBEA96000D1C34E /* WVSignInScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F5B26A1DBEA96000D1C34E /* WVSignInScreen.m */; };
 		31F8CD291DD11DE200AE4920 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */; };
 		31F8CD2C1DD11E6E00AE4920 /* WVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F8CD2B1DD11E6E00AE4920 /* WVReachability.m */; };
+		31F8CD2F1DD38D1500AE4920 /* WVTakePhotoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F8CD2E1DD38D1500AE4920 /* WVTakePhotoScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CC9591D4B8F1D2CA8F382E3 /* Pods-Workville.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workville.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workville/Pods-Workville.release.xcconfig"; sourceTree = "<group>"; };
-		319B49141DC7A8B3004F267A /* WVDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVDataStore.h; sourceTree = "<group>"; };
-		319B49151DC7A8B3004F267A /* WVDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVDataStore.m; sourceTree = "<group>"; };
+		31433E111DD3A401006EB3C2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		319B49171DC7A961004F267A /* Workville.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Workville.entitlements; sourceTree = "<group>"; };
 		319B49181DC7AD36004F267A /* WVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVUser.h; sourceTree = "<group>"; };
 		319B49191DC7AD36004F267A /* WVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVUser.m; sourceTree = "<group>"; };
@@ -58,6 +58,8 @@
 		31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		31F8CD2A1DD11E6E00AE4920 /* WVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WVReachability.h; path = ../../../../../Downloads/Reachability/Reachability/WVReachability.h; sourceTree = "<group>"; };
 		31F8CD2B1DD11E6E00AE4920 /* WVReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WVReachability.m; path = ../../../../../Downloads/Reachability/Reachability/WVReachability.m; sourceTree = "<group>"; };
+		31F8CD2D1DD38D1500AE4920 /* WVTakePhotoScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVTakePhotoScreen.h; sourceTree = "<group>"; };
+		31F8CD2E1DD38D1500AE4920 /* WVTakePhotoScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVTakePhotoScreen.m; sourceTree = "<group>"; };
 		BEF042B991E70BFC6DFB7F44 /* libPods-Workville.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workville.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38C97D624698AAF44270CA9 /* Pods-Workville.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workville.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workville/Pods-Workville.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31433E121DD3A401006EB3C2 /* AVFoundation.framework in Frameworks */,
 				31F8CD291DD11DE200AE4920 /* SystemConfiguration.framework in Frameworks */,
 				0763ADD00C6D52A2D6B967BD /* libPods-Workville.a in Frameworks */,
 			);
@@ -75,31 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		319B49201DC7DD7C004F267A /* LaunchScreen */ = {
+		319B49201DC7DD7C004F267A /* LaunchScreen (FIRST VIEW) */ = {
 			isa = PBXGroup;
 			children = (
 				31F5B2571DBE8C7400D1C34E /* WVLaunchScreen.h */,
 				31F5B2581DBE8C7400D1C34E /* WVLaunchScreen.m */,
 			);
-			name = LaunchScreen;
+			name = "LaunchScreen (FIRST VIEW)";
 			sourceTree = "<group>";
 		};
-		319B49211DC7DD86004F267A /* Sign-in Screen */ = {
+		319B49211DC7DD86004F267A /* Sign-in Screen (SECOND VIEW) */ = {
 			isa = PBXGroup;
 			children = (
 				31F5B2691DBEA96000D1C34E /* WVSignInScreen.h */,
 				31F5B26A1DBEA96000D1C34E /* WVSignInScreen.m */,
 			);
-			name = "Sign-in Screen";
+			name = "Sign-in Screen (SECOND VIEW)";
 			sourceTree = "<group>";
 		};
-		319B49251DC7DEB2004F267A /* Welcome Screen */ = {
+		319B49251DC7DEB2004F267A /* Welcome Screen (FOURTH VIEW) */ = {
 			isa = PBXGroup;
 			children = (
 				319B49221DC7DE05004F267A /* WVWelcomeScreen.h */,
 				319B49231DC7DE05004F267A /* WVWelcomeScreen.m */,
 			);
-			name = "Welcome Screen";
+			name = "Welcome Screen (FOURTH VIEW)";
 			sourceTree = "<group>";
 		};
 		31F5B2341DBE8BA000D1C34E = {
@@ -146,9 +149,10 @@
 		31F5B25A1DBE8CA500D1C34E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				319B49201DC7DD7C004F267A /* LaunchScreen */,
-				319B49211DC7DD86004F267A /* Sign-in Screen */,
-				319B49251DC7DEB2004F267A /* Welcome Screen */,
+				319B49201DC7DD7C004F267A /* LaunchScreen (FIRST VIEW) */,
+				319B49211DC7DD86004F267A /* Sign-in Screen (SECOND VIEW) */,
+				31F8CD301DD38D1A00AE4920 /* Photo Screen (THIRD VIEW) */,
+				319B49251DC7DEB2004F267A /* Welcome Screen (FOURTH VIEW) */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -183,12 +187,19 @@
 			children = (
 				31F5B2631DBE9D0900D1C34E /* WVDatabase.h */,
 				31F5B2641DBE9D0900D1C34E /* WVDatabase.m */,
-				319B49141DC7A8B3004F267A /* WVDataStore.h */,
-				319B49151DC7A8B3004F267A /* WVDataStore.m */,
 				319B49181DC7AD36004F267A /* WVUser.h */,
 				319B49191DC7AD36004F267A /* WVUser.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		31F8CD301DD38D1A00AE4920 /* Photo Screen (THIRD VIEW) */ = {
+			isa = PBXGroup;
+			children = (
+				31F8CD2D1DD38D1500AE4920 /* WVTakePhotoScreen.h */,
+				31F8CD2E1DD38D1500AE4920 /* WVTakePhotoScreen.m */,
+			);
+			name = "Photo Screen (THIRD VIEW)";
 			sourceTree = "<group>";
 		};
 		6F6179130C3BB4F18E240476 /* Pods */ = {
@@ -203,6 +214,7 @@
 		E5EA922F70591E4B051C0041 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31433E111DD3A401006EB3C2 /* AVFoundation.framework */,
 				31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */,
 				BEF042B991E70BFC6DFB7F44 /* libPods-Workville.a */,
 			);
@@ -341,7 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				319B49161DC7A8B3004F267A /* WVDataStore.m in Sources */,
+				31F8CD2F1DD38D1500AE4920 /* WVTakePhotoScreen.m in Sources */,
 				31F5B26B1DBEA96000D1C34E /* WVSignInScreen.m in Sources */,
 				319B49241DC7DE05004F267A /* WVWelcomeScreen.m in Sources */,
 				31F5B2451DBE8BA100D1C34E /* AppDelegate.m in Sources */,

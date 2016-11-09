@@ -37,7 +37,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     WVLaunchScreen *launchScreen = [[WVLaunchScreen alloc] initWithNibName:@"WVLaunchScreen" bundle:nil];
-    self.window.rootViewController = launchScreen;
+    UINavigationController *naviController = [[UINavigationController alloc]initWithRootViewController:launchScreen];
+    [naviController setNavigationBarHidden:YES];
+    self.window.rootViewController = naviController;
     [self.window makeKeyAndVisible];
     [launchScreen view];
     
@@ -59,9 +61,7 @@
     
     
     
-    
-    
-    
+    return NO;
 }
 
 

@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.welcomeLabel.text = @"Workville";
    // self.signinButton.layer.cornerRadius = self.signinButton.bounds.size.height/4;
    
@@ -35,7 +36,10 @@
     
     NSLog(@"when sign in button tapped");
     self.signInViewController = [[WVSignInScreen alloc]initWithNibName:@"WVSignInScreen" bundle:nil];
-    [self presentViewController:self.signInViewController animated:YES completion:nil];
+    //[self presentViewController:self.signInViewController animated:YES completion:nil];
+    
+    [self.navigationController pushViewController:self.signInViewController animated:YES];
+    
   //  [self dismissViewControllerAnimated:YES completion:nil];
     
     

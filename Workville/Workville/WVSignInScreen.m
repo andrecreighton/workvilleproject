@@ -8,22 +8,19 @@
 
 
 #import "WVUser.h"
-#import "WVDataStore.h"
 #import "WVSignInScreen.h"
+#import "WVTakePhotoScreen.h"
 #import <Masonry/Masonry.h>
 
-@interface WVSignInScreen () <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface WVSignInScreen () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *centerView;
-@property (strong, nonatomic) IBOutlet UIView *photoFrameContentView;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UITextField *firstnameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *lastnameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UIButton *continueButton;
-@property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
-@property (strong, nonatomic) UIImagePickerController *picker;
-@property (strong, nonatomic) WVDataStore* datastore;
+
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 
 @property (strong, nonatomic) NSString *dateString;
@@ -37,13 +34,12 @@
     [super viewDidLoad];
    
     
-    self.datastore = [WVDataStore sharedDataStore];
+    
     
         
 //       [self.firstnameTextField becomeFirstResponder];
 //        self.continueButton.enabled = NO;
 
-    self.photoImageView.layer.cornerRadius = self.photoImageView.bounds.size.width/2;
   //  [self.backButton setTintColor:[UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1]];
 
     [self.backButton setTitleColor:[UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1] forState:UIControlStateNormal];
@@ -75,15 +71,19 @@
 
 - (IBAction)whenBackButtonTapped:(id)sender {
     
+    NSLog(@"RESPONDING");
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
     [self.view endEditing:YES];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
 
 - (IBAction)whenContinueButtonTapped:(id)sender {
     
+    NSLog(@"RESPONDING");
     
     
     NSString *firstname = self.firstnameTextField.text;
@@ -97,35 +97,15 @@
     
     
     WVWelcomeScreen *welcomeScreen = [[WVWelcomeScreen alloc] initWithNibName:@"WVWelcomeScreen" bundle:nil];
-    [self presentViewController:welcomeScreen animated:YES completion:nil];
+    WVTakePhotoScreen *photoScreen = [[WVTakePhotoScreen alloc] initWithNibName:@"WVPhotoFrameView" bundle:nil];
+    [self.navigationController pushViewController:photoScreen animated:YES];
 
-    
-    
-//    [self setUpImageProcess];
-    
-    
-    
+
     
     
 }
 
 
--(void)setUpImageProcess
-{
-    
-    _picker = [[UIImagePickerController alloc] init];
-    _picker.delegate = self;
-    _picker.allowsEditing = YES;
-    _picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-    _picker.showsCameraControls = YES;
-
-
-    [self presentViewController:_picker animated:YES completion:nil];
-   
-
-    
-}
 
 -(void)validateTextFields{
     
@@ -139,8 +119,6 @@
     
     
 }
-
-
 
 
 
