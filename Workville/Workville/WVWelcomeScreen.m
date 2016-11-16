@@ -12,7 +12,7 @@
 @interface WVWelcomeScreen ()
 
 @property (nonatomic,strong) WVLaunchScreen *launchScreen;
-@property (strong, nonatomic) IBOutlet UIImageView *workvilleLogo;
+
 
 @end
 
@@ -23,8 +23,19 @@
     
     
     self.launchScreen = [[WVLaunchScreen alloc] initWithNibName:@"WVLaunchScreen" bundle:nil];
-    [self.workvilleLogo setTintColor:[UIColor clearColor]];
-    [self.workvilleLogo setBackgroundColor:[UIColor clearColor]];
+    [self.logoImageView setTintColor:[UIColor whiteColor]];
+
+    
+    
+    UIView *view = [[UIView alloc] initWithFrame:self.view.bounds];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:55./255.0 green:230./255.0 blue:223./255.0 alpha:1] CGColor],(id)[[UIColor colorWithRed: 2./255.0 green:133./255.0 blue:128./255.0 alpha:1] CGColor],  nil];
+    [gradient setStartPoint:CGPointMake(1, 0)];
+    [gradient setEndPoint:CGPointMake(0, 1)];
+    
+    [self.view.layer insertSublayer:gradient atIndex:0];
+
     
 }
 
@@ -32,7 +43,8 @@
 - (IBAction)backToLaunchButton:(id)sender {
 
 
-    [self presentViewController:self.launchScreen animated:YES completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 
 
 

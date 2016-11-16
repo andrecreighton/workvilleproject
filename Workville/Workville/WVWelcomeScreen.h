@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WVWelcomeScreen : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *logoImageView;
 
 @end

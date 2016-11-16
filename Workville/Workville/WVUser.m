@@ -11,7 +11,7 @@
 
 @implementation WVUser
 
--(instancetype)initWithFirstname:(NSString *)firstname Lastname:(NSString *)lastname email:(NSString *)email{
+-(instancetype)initWithFirstname:(NSString *)firstname Lastname:(NSString *)lastname email:(NSString *)email time:(NSString *)timeAndDateOfSignin{
     
     
     self = [super init];
@@ -22,6 +22,7 @@
         _lastname  = lastname;
         _email     = email;
         _user      = [[WVUser alloc]init];
+        _timeAndDateOfSignin = timeAndDateOfSignin;
         
         [self addUserToArray];
       
@@ -35,7 +36,8 @@
     
     NSDictionary *userDictionary = @{@"firstname" : self.firstname,
                                      @"lastname"  : self.lastname,
-                                     @"email"     : self.email};
+                                     @"email"     : self.email,
+                                     @"date"      : self.timeAndDateOfSignin};
     
     
     

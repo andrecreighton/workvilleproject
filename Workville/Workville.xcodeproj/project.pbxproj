@@ -23,6 +23,7 @@
 		31F5B2651DBE9D0900D1C34E /* WVDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F5B2641DBE9D0900D1C34E /* WVDatabase.m */; };
 		31F5B2681DBEA6FD00D1C34E /* WVSignInScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F5B2671DBEA6FD00D1C34E /* WVSignInScreen.xib */; };
 		31F5B26B1DBEA96000D1C34E /* WVSignInScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F5B26A1DBEA96000D1C34E /* WVSignInScreen.m */; };
+		31F7223B1DDA1DB500491D56 /* WVImageUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F7223A1DDA1DB500491D56 /* WVImageUpload.m */; };
 		31F8CD291DD11DE200AE4920 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */; };
 		31F8CD2C1DD11E6E00AE4920 /* WVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F8CD2B1DD11E6E00AE4920 /* WVReachability.m */; };
 		31F8CD2F1DD38D1500AE4920 /* WVTakePhotoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F8CD2E1DD38D1500AE4920 /* WVTakePhotoScreen.m */; };
@@ -54,6 +55,8 @@
 		31F5B2671DBEA6FD00D1C34E /* WVSignInScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WVSignInScreen.xib; sourceTree = "<group>"; };
 		31F5B2691DBEA96000D1C34E /* WVSignInScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVSignInScreen.h; sourceTree = "<group>"; };
 		31F5B26A1DBEA96000D1C34E /* WVSignInScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVSignInScreen.m; sourceTree = "<group>"; };
+		31F722391DDA1DB500491D56 /* WVImageUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVImageUpload.h; sourceTree = "<group>"; };
+		31F7223A1DDA1DB500491D56 /* WVImageUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVImageUpload.m; sourceTree = "<group>"; };
 		31F8CD271DCFFB5500AE4920 /* AppConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		31F8CD281DD11DE200AE4920 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		31F8CD2A1DD11E6E00AE4920 /* WVReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WVReachability.h; path = ../../../../../Downloads/Reachability/Reachability/WVReachability.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 		31F5B2661DBE9D1300D1C34E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				31F722391DDA1DB500491D56 /* WVImageUpload.h */,
+				31F7223A1DDA1DB500491D56 /* WVImageUpload.m */,
 				31F5B2631DBE9D0900D1C34E /* WVDatabase.h */,
 				31F5B2641DBE9D0900D1C34E /* WVDatabase.m */,
 				319B49181DC7AD36004F267A /* WVUser.h */,
@@ -358,6 +363,7 @@
 				319B49241DC7DE05004F267A /* WVWelcomeScreen.m in Sources */,
 				31F5B2451DBE8BA100D1C34E /* AppDelegate.m in Sources */,
 				31F5B2651DBE9D0900D1C34E /* WVDatabase.m in Sources */,
+				31F7223B1DDA1DB500491D56 /* WVImageUpload.m in Sources */,
 				31F5B2421DBE8BA100D1C34E /* main.m in Sources */,
 				319B491A1DC7AD36004F267A /* WVUser.m in Sources */,
 				31F8CD2C1DD11E6E00AE4920 /* WVReachability.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "WVLaunchScreen.h"
 #import "WVSignInScreen.h"
+#import "AppConstant.h"
 
 @interface WVLaunchScreen ()
 
@@ -23,9 +24,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIColor *buttonColorOne = CONTINUEBUTTONCOLOR1;
+    UIColor *buttonColorTwo = CONTINUEBUTTONCOLOR2;
+    
+    UIView *view = [[UIView alloc] initWithFrame:self.signinButton.bounds];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[buttonColorTwo CGColor],(id)[buttonColorOne CGColor],  nil];
+    [gradient setStartPoint:CGPointMake(.3, 0)];
+    [gradient setEndPoint:CGPointMake(0, .3)];
+    
+    [self.signinButton.layer insertSublayer:gradient atIndex:0];
+    
     
     self.welcomeLabel.text = @"Workville";
-   // self.signinButton.layer.cornerRadius = self.signinButton.bounds.size.height/4;
+    self.signinButton.layer.cornerRadius = self.signinButton.bounds.size.height/10;
    
     
 

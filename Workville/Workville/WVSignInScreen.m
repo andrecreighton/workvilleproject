@@ -7,7 +7,7 @@
 //
 
 
-#import "WVUser.h"
+#import "AppConstant.h"
 #import "WVSignInScreen.h"
 #import "WVTakePhotoScreen.h"
 #import <Masonry/Masonry.h>
@@ -33,19 +33,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    
-    
-    
-        
 //       [self.firstnameTextField becomeFirstResponder];
 //        self.continueButton.enabled = NO;
 
-  //  [self.backButton setTintColor:[UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1]];
+    
+    UIColor *buttonColorOne = CONTINUEBUTTONCOLOR1;
+    UIColor *buttonColorTwo = CONTINUEBUTTONCOLOR2;
+    
+    UIView *view = [[UIView alloc] initWithFrame:self.continueButton.bounds];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[buttonColorTwo CGColor],(id)[buttonColorOne CGColor],  nil];
+    [gradient setStartPoint:CGPointMake(.3, 0)];
+    [gradient setEndPoint:CGPointMake(0, .3)];
+    
+    [self.continueButton.layer insertSublayer:gradient atIndex:0];
+
+    
 
     [self.backButton setTitleColor:[UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1] forState:UIControlStateNormal];
     
     self.backButton.tintColor = [UIColor colorWithRed:62./255 green:194./255 blue:192./255 alpha:1];
-    
+    self.continueButton.layer.cornerRadius = self.continueButton.bounds.size.height/10;
     
     
     
@@ -83,25 +92,17 @@
 
 - (IBAction)whenContinueButtonTapped:(id)sender {
     
-    
-    
-    
-    NSString *firstname = self.firstnameTextField.text;
-    NSString *lastname  = self.lastnameTextField.text;
-    NSString *email     = self.emailTextField.text;
+    self.firstname = self.firstnameTextField.text;
+    self.lastname  = self.lastnameTextField.text;
+    self.email     = self.emailTextField.text;
 
-    // Createss the user with initial properties firstname, lastname, and email
     
-    WVUser *user = [[WVUser alloc] initWithFirstname:firstname Lastname:lastname email:email];
-    
-    
-    
-    WVWelcomeScreen *welcomeScreen = [[WVWelcomeScreen alloc] initWithNibName:@"WVWelcomeScreen" bundle:nil];
     WVTakePhotoScreen *photoScreen = [[WVTakePhotoScreen alloc] initWithNibName:@"WVPhotoFrameView" bundle:nil];
-    [self.navigationController pushViewController:photoScreen animated:YES];
-
-
+    photoScreen.firstname = self.firstname;
+    photoScreen.lastname = self.lastname;
+    photoScreen.email = self.email;
     
+    [self.navigationController pushViewController:photoScreen animated:YES];
     
 }
 

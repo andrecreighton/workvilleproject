@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@import FirebaseStorage;
+
 @interface WVTakePhotoScreen : UIViewController
 @property (strong, nonatomic) IBOutlet UIView *conentView;
+
+@property(strong,nonatomic)NSString *firstname;
+@property(strong,nonatomic)NSString *lastname;
+@property(strong,nonatomic)NSString *email;
+
+
+
+
 
 @end
